@@ -62,8 +62,9 @@ public class BoohbahMessageDecryptor {
         // TODO: Try different shift values (0-25) until you find a decryption that makes sense
         // Loop through possible shift values and print each decryption attempt
         // When you find one that looks like a real message, note the shift value!
+            System.out.println("\n------------------------------------------\n| WARNING: INTERCEPTED ENCRYPTED MESSAGE |\n------------------------------------------");
+            System.out.println("RUNNING BOOHBAH MESSAGE DECRYPTER...\n");
 
-            System.out.println("\n---------------------\n|DECRYPTION STARTING|\n---------------------");
             for (int i = 0; i <= 25; i++) {
                 System.out.println("Shift " + i + ":" + decrypt(encryptedMessage,i));
             } // Shift = 3
@@ -75,15 +76,17 @@ public class BoohbahMessageDecryptor {
         // TODO: Write the decrypted message to the output file
             try(FileWriter fw = new FileWriter(outputFile)){
                 fw.write(decryptedMessage);
-                System.out.println("\n-------------------------\n|DECRYPTED MESSAGE SAVED|\n-------------------------");
+                System.out.println("\nDECRYPTED MESSAGE SAVED");
             }catch (IOException e){
                 System.out.println("Couldn't write file :(");
             }
 
         // TODO: Display results to console
-            System.out.println("---------------------\n|DECRYPTION COMPLETE|\n---------------------");
+            System.out.println("-----------------------\n| DECRYPTION COMPLETE |\n-----------------------");
+            System.out.println("ENCRYPTED MESSAGE:\n" + encryptedMessage);
             System.out.println("DECRYPTED MESSAGE:\n" + decryptedMessage);
-            System.out.println("\nSTATUS:\nUNDER THREAT\nTHREAT IDENTIFIED:\nTHE TELETUBBIES");
+            System.out.println("\n-------------\n| !WARNING! |\n-------------");
+            System.out.println("\nSTATUS:\nUNDER THREAT\nTHREAT IDENTIFIED:\nTHE TELETUBBIES\nTHREAT LVL:\nN\\A\n");
 
          } catch (IOException e) {
         // TODO: Handle the IOException appropriately
