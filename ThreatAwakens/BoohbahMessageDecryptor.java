@@ -78,7 +78,7 @@ public class BoohbahMessageDecryptor {
                 fw.write(decryptedMessage);
                 System.out.println("\nDECRYPTED MESSAGE SAVED");
             }catch (IOException e){
-                System.out.println("Couldn't write file :(");
+                System.out.println("\n\nERROR: MESSAGE COULD NOT BE SAVED\n\n");
             }
 
         // TODO: Display results to console
@@ -90,7 +90,7 @@ public class BoohbahMessageDecryptor {
 
          } catch (IOException e) {
         // TODO: Handle the IOException appropriately
-            System.out.println("Couldn't read file :(");
+            System.out.println("\nERROR: MESSAGE COULD NOT BE FOUND");
          }
     }
 }
