@@ -83,7 +83,7 @@ public class BoohbahMessageDecryptor {
         // TODO: Display results to console
             System.out.println("---------------------\n|DECRYPTION COMPLETE|\n---------------------");
             System.out.println("DECRYPTED MESSAGE:\n" + decryptedMessage);
-            System.out.println("\nTHREAT IDENTIFIED:\nTHE TELETUBBIES");
+            System.out.println("\nSTATUS:\nUNDER THREAT\nTHREAT IDENTIFIED:\nTHE TELETUBBIES");
 
          } catch (IOException e) {
         // TODO: Handle the IOException appropriately
