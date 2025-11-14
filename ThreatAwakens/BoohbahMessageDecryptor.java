@@ -49,8 +49,8 @@ public class BoohbahMessageDecryptor {
 
     public static void main(String[] args) {
         // TODO: Declare variables for file paths
-        String inputFile = "C:\\Users\\mlpuryear\\IdeaProjects\\BoohbahThreatAwakens\\src\\encrypted_message.txt";
-        String outputFile = "C:\\Users\\mlpuryear\\IdeaProjects\\BoohbahThreatAwakens\\src\\decrypted_message.txt";
+        String inputFile = "..\\BoohbahThreatAwakens\\src\\encrypted_message.txt";
+        String outputFile = "..\\BoohbahThreatAwakens\\src\\decrypted_message.txt";
 
         // TODO: Try-with-resources block to handle IOException
         // Include file operations within the try parentheses so resources are automatically closed
@@ -76,7 +76,7 @@ public class BoohbahMessageDecryptor {
         // TODO: Write the decrypted message to the output file
             try(FileWriter fw = new FileWriter(outputFile)){
                 fw.write(decryptedMessage);
-                System.out.println("\nDECRYPTED MESSAGE SAVED");
+                System.out.println("\nDECRYPTED MESSAGE SAVED\n");
             }catch (IOException e){
                 System.out.println("\n\nERROR: MESSAGE COULD NOT BE SAVED\n\n");
             }
